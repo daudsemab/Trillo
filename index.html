@@ -17,13 +17,32 @@
             <header class="header">
                 <img src="./img/logo.png" alt="Trillo Logo" class="logo">
                 <form action="#" class="search">
-                    <input type="text" class="search__input">
+                    <input type="text" class="search__input" placeholder="search hotels">
                     <button class="search__btn">
                         <svg class="search__logo">
-                            <use xlink:href='./img/sprite.svg#bookmark'></use>
+                            <use xlink:href='./img/sprite.svg#icon-magnifying-glass'></use>
                         </svg>
                     </button>
                 </form>
+
+                <nav class="user-nav">
+                    <div class="user-nav__icon-box">
+                        <svg class="user-nav__icon" >
+                            <use xlink:href="./img/sprite.svg#icon-bookmark"></use>
+                        </svg>
+                        <span class="user-nav__notification">5</span>
+                    </div>
+                    <div class="user-nav__icon-box">
+                        <svg class="user-nav__icon" >
+                            <use xlink:href="./img/sprite.svg#icon-chat"></use>
+                        </svg>
+                        <span class="user-nav__notification">11</span>
+                    </div>
+                    <div class="user-nav__user">
+                        <img src="./img/user.jpg" alt="User Photo" class="user-nav__user-photo">
+                    </div>
+                    <span class="user-nav__user-name">Daud</span>
+                </nav>
                 
             </header>
             <div class="content">
