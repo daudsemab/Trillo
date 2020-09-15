@@ -300,7 +300,7 @@ body {
 
 .logo {
   height: 3.25rem;
-  margin-left: 3rem; }
+  margin-left: 2rem; }
 
 .search {
   flex: 0 0 40%;
@@ -314,7 +314,7 @@ body {
     font-size: inherit;
     color: inherit;
     border: none;
-    padding: .7rem 1.5rem;
+    padding: 0.7rem 1.5rem;
     border-radius: 70px;
     width: 90%;
     transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
@@ -338,16 +338,46 @@ body {
   .search__logo {
     height: 2rem;
     width: 2rem;
-    fill: var(--color-gray-dark-1); }
+    fill: var(--color-gray-dark-2); }
 
 .user-nav {
-  margin-right: 3rem; }
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+  .user-nav > * {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%; }
+    .user-nav > *:hover {
+      background-color: var(--color-gray-light-3); }
+  .user-nav__icon-box {
+    position: relative;
+    padding: 0 2rem; }
   .user-nav__icon {
     height: 2.25rem;
-    width: 2.25rem; }
+    width: 2.25rem;
+    fill: var(--color-gray-dark-2); }
+  .user-nav__notification {
+    height: 1.8rem;
+    width: 1.8rem;
+    font-size: .8rem;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    position: absolute;
+    top: 1.5rem;
+    right: 1.1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .user-nav__user {
+    padding: 1rem 2rem 1rem 1rem; }
   .user-nav__user-photo {
     width: 3.75rem;
-    border-radius: 50%; }
+    border-radius: 50%;
+    margin-right: 1rem; }
 
 .container {
   max-width: 120rem;
