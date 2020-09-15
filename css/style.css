@@ -421,6 +421,22 @@ body {
     fill: currentColor;
     margin-right: 1rem; }
 
+.gallery {
+  display: flex; }
+  .gallery__photo {
+    width: 100%;
+    height: 100%; }
+
+.overview {
+  display: flex;
+  justify-content: space-between; }
+  .overview__stars {
+    margin-right: auto; }
+  .overview__icon-star, .overview__icon-location {
+    width: 1.75rem;
+    height: 1.75rem;
+    fill: var(--color-primary); }
+
 .container {
   max-width: 120rem;
   min-height: 90vh;
@@ -448,6 +464,6 @@ body {
   justify-content: space-between; }
 
 .hotel-view {
-  background-color: orange;
+  background-color: var(--color-gray-light-1);
   height: 80rem;
   flex: 1; }

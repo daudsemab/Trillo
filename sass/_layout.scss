@@ -28,12 +28,12 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  // align-items: center;
 }
 
 .hotel-view {
+  background-color: var(--color-gray-light-1);
+  
   // TEST
- background-color: orange;
  height: 80rem;
 
  flex: 1;
