@@ -401,7 +401,7 @@
     transform: scaleY(0);
     transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s,
       background-color 0.1s;
-      z-index: 2;
+    z-index: 2;
   }
 
   &__item:hover::before,
@@ -436,7 +436,7 @@
 }
 
 ////////////////////////////////////////////////////
-/// HOTEL GALLERY 
+/// HOTEL GALLERY
 
 .gallery {
   display: flex;
@@ -452,14 +452,18 @@
 
 .overview {
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid var(--color-gray-light-2);
 
   &__heading {
-
+    font-size: 2.3rem;
+    font-weight: 300;
+    padding: 1.5rem 2rem;
   }
 
   &__stars {
     margin-right: auto;
+    display: flex;
   }
 
   &__icon-star,
@@ -470,18 +474,58 @@
   }
 
   &__location {
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+  }
 
+  &__icon-location {
+    margin-right: 0.5rem;
   }
 
   &__rating {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    margin-left: 2rem;
+    padding: 0 2rem;
+    align-self: stretch;
 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   &__rating-average {
-
+    font-size: 2.25rem;
+    font-weight: 300;
   }
 
   &__rating-count {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+  }
+}
 
+////////////////////////////////////////////////////
+/// BUTTON INLINE
+.btn-inline {
+  text-decoration: none;
+  border: none;
+  color: var(--color-primary);
+  font-size: inherit;
+  border-bottom: 1px solid currentColor;
+  display: inline-block;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.2s;
+
+  &:hover {
+    color: var(--color-gray-dark-3);
+  }
+
+  &:active {
+    outline: none;
+    transform: scale(.98);
   }
 }

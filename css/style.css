@@ -17,7 +17,7 @@
   --color-black: #000;
   --default-font-size: 1.6rem;
   --shadow-light: 0 .5rem 2rem rgba(var(--color-black), .2);
-  --shadow-med: 0 1rem 3rem rgba(var(--color-black), .3);
+  --shadow-med: 0 1rem 3rem 0px rgba(var(--color-black), .3);
   --shadow-dark: 0 2rem 5rem rgba(var(--color-black), .3); }
 
 *,
@@ -429,13 +429,57 @@ body {
 
 .overview {
   display: flex;
-  justify-content: space-between; }
+  align-items: center;
+  border-bottom: 2px solid var(--color-gray-light-2); }
+  .overview__heading {
+    font-size: 2.3rem;
+    font-weight: 300;
+    padding: 1.5rem 2rem; }
   .overview__stars {
-    margin-right: auto; }
+    margin-right: auto;
+    display: flex; }
   .overview__icon-star, .overview__icon-location {
     width: 1.75rem;
     height: 1.75rem;
     fill: var(--color-primary); }
+  .overview__location {
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center; }
+  .overview__icon-location {
+    margin-right: 0.5rem; }
+  .overview__rating {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    margin-left: 2rem;
+    padding: 0 2rem;
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+  .overview__rating-average {
+    font-size: 2.25rem;
+    font-weight: 300; }
+  .overview__rating-count {
+    font-size: 0.8rem;
+    text-transform: uppercase; }
+
+.btn-inline {
+  text-decoration: none;
+  border: none;
+  color: var(--color-primary);
+  font-size: inherit;
+  border-bottom: 1px solid currentColor;
+  display: inline-block;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.2s; }
+  .btn-inline:hover {
+    color: var(--color-gray-dark-3); }
+  .btn-inline:active {
+    outline: none;
+    transform: scale(0.98); }
 
 .container {
   max-width: 120rem;
@@ -446,7 +490,7 @@ body {
 .header {
   height: 7rem;
   background-color: var(--color-white);
-  border-bottom: var(--color-gray-light-2);
+  border-bottom: 2px solid var(--color-gray-light-2);
   display: flex;
   justify-content: space-between;
   align-items: center; }
@@ -464,6 +508,6 @@ body {
   justify-content: space-between; }
 
 .hotel-view {
-  background-color: var(--color-gray-light-1);
+  background-color: var(--color-white);
   height: 80rem;
   flex: 1; }
