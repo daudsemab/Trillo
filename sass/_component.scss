@@ -73,7 +73,7 @@
     font-size: var(--default-font-size);
     display: inline-block;
     text-decoration: none;
-    border-bottom: 1px solid var(--color-primar) y;
+    border-bottom: 1px solid var(--color-primary);
     padding: 3px;
     transition: all 0.2s;
   }
@@ -90,159 +90,6 @@
   &:active {
     transform: translateY(-1px);
     box-shadow: 0 0.5rem 1rem rgba(var(--color-black), 0.2);
-  }
-}
-
-// -----------------  POPUP
-
-// HTML POPUP
-
-// <div class="popup" id="booking-popup">
-// <div class="popup__content-box">
-//   <section class="popup__section--left">
-//     <img src="img/nat-8.jpg" alt="Fig.1" class="popup__img" />
-//     <img src="img/nat-9.jpg" alt="Fig.2" class="popup__img" />
-//   </section>
-//   <section class="popup__section--right">
-//     <a href="#booking-card-section" class="popup__close">&times;</a>
-//     <h2 class="heading-secondary u-margin-bottom-medium">
-//       Adventurous tour waiting for you
-//     </h2>
-//     <h3 class="heading-tertiary u-margin-bottom-small">
-//       Important &ndash; please read the terms before booking
-//     </h3>
-//     <p class="popup__text u-margin-bottom-medium">
-//       Of course, many developers have only a hazy understanding of what
-//       accessibility means — something to do with government contracts,
-//       checklists, and screen readers, right? — and there are plenty of
-//       misconceptions floating around. For example, many developers feel
-//       that addressing accessibility will force them to choose between
-//       creating a delightful and attractive experience, and one that is
-//       clunky and ugly but accessible.
-//     </p>
-//     <button class="btn btn--green">Book Now!</button>
-//   </section>
-// </div>
-// </div>
-
-// SASS POPUP
-
-.popup {
-  width: 100%;
-  height: 100vh;
-  background-color: rgba(var(--color-black), 0.8);
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 99999;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s ease;
-
-  // IN CASE YOU WANT TO BLUR BACKGROUND OF POP-UP BUT IS JAM OR EXCLUDE THE SMOTHNESS OF ANIMATIONS AND WEB PAGE.
-
-  // @supports (backdrop-filter: blur()) or (-webkit-backdrop-filter: blur()) {
-  //   -wwebkit-backdrop-filter: blur(5px);
-  //   backdrop-filter: blur(5px);
-  //   background-color: rgba(--color-black, .7);
-  // }
-
-  &__section {
-    &--left {
-      width: 33.333%;
-      display: table-cell;
-
-      @include media(tab-land) {
-        width: 0%;
-        display: none;
-      }
-    }
-
-    &--right {
-      width: 67.6667%;
-      padding: 4rem;
-      display: table-cell;
-      vertical-align: middle;
-
-      @include media(tab-land) {
-        width: 100%;
-      }
-    }
-  }
-
-  &__img {
-    display: block;
-    width: 100%;
-  }
-
-  &__text {
-    font-size: var(--default-font-size);
-    color: var(--color-gray-dark-1);
-    column-count: 2;
-    column-gap: 3rem;
-    column-rule: 1px solid var(--color-gray-light-4);
-    hyphens: auto;
-
-    @include media(tab-land) {
-      column-gap: 5rem;
-    }
-
-    @include media(tab-port) {
-      width: 85%;
-      column-count: 1;
-    }
-
-    @include media(small-tab) {
-      width: 100%;
-      column-count: 1;
-    }
-  }
-
-  // POPUP OPEN STATES
-
-  &:target {
-    opacity: 1;
-    visibility: visible;
-  }
-
-  &__content-box {
-    @include center-hr-vt;
-    width: 80%;
-    height: 40rem;
-    background-color: var(--color-white);
-    display: table;
-    border-radius: 3px;
-    overflow: hidden;
-    opacity: 0;
-    transition: all 0.4s 0.2s ease;
-    transform: translate(-50%, -50%) scale(0.2);
-  }
-
-  &:target &__content-box {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1);
-  }
-
-  // POPUP CLOSE BUTTON
-
-  &__close {
-    &:link,
-    &:visited {
-      position: absolute;
-      top: 2rem;
-      right: 2rem;
-      display: inline-block;
-      font-size: 3rem;
-      color: var(--color-gray-dark-1);
-      line-height: 1;
-      text-decoration: none;
-      transition: all 0.1s;
-    }
-
-    &:hover,
-    &:active {
-      color: var(--color-primary);
-    }
   }
 }
 
@@ -453,7 +300,7 @@
 .overview {
   display: flex;
   align-items: center;
-  border-bottom: 2px solid var(--color-gray-light-2);
+  border-bottom: var(--line);
 
   &__heading {
     font-size: 2.3rem;
@@ -526,6 +373,31 @@
 
   &:active {
     outline: none;
-    transform: scale(.98);
+    transform: scale(0.98);
   }
+}
+
+////////////////////////////////////////////////////
+/// HOTEL DETAILS
+
+.details {
+  display: flex;
+  padding: 4rem;
+  border-bottom: var(--line);
+  background-color: var(--color-gray-light-1);
+}
+
+.description {
+  font-size: 1.6rem;
+  background-color: var(--color-white);
+  box-shadow: var(--shadow-light);
+  padding: 3rem;
+  flex: 0 0 60%;
+  margin-right: 4rem;
+}
+
+.user-reviews {
+  flex: 1;
+  background-color: var(--color-white);
+  box-shadow: var(--shadow-light);
 }
