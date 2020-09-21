@@ -340,6 +340,10 @@ body {
     fill: currentColor;
     margin-right: 1rem; }
 
+.copyright-text {
+  padding: 0 1rem 1rem 1rem;
+  text-align: center; }
+
 .gallery {
   display: flex; }
   .gallery__photo {
@@ -418,6 +422,48 @@ body {
   flex: 1;
   background-color: var(--color-white);
   box-shadow: var(--shadow-light); }
+
+.paragraph:not(:last-of-type) {
+  margin-bottom: 2rem; }
+
+.list {
+  list-style: none;
+  margin: 3rem 0;
+  padding: 3rem 0;
+  border-top: var(--line);
+  border-bottom: var(--line);
+  display: flex;
+  flex-wrap: wrap; }
+  .list__item {
+    flex: 0 0 50%;
+    margin-bottom: 0.7rem; }
+    .list__item::before {
+      content: "";
+      height: 1rem;
+      width: 1rem;
+      display: inline-block;
+      margin-right: 0.7rem;
+      background-color: var(--color-primary);
+      -webkit-mask-image: url(../img/chevron-thin-right.svg);
+      -webkit-mask-size: cover;
+      mask-image: url(../img/chevron-thin-right.svg);
+      mask-size: cover; }
+
+.recomend {
+  font-size: 1.3rem;
+  color: var(--color-gray-dark-3);
+  display: flex;
+  align-items: center; }
+  .recomend__count {
+    margin-right: auto; }
+  .recomend__photo {
+    box-sizing: content-box;
+    height: 4rem;
+    width: 4rem;
+    border: 2px solid #fff;
+    border-radius: 50%; }
+    .recomend__photo:not(:last-child) {
+      margin-right: -1.5rem; }
 
 .container {
   max-width: 120rem;

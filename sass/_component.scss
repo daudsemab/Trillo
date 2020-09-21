@@ -283,6 +283,15 @@
 }
 
 ////////////////////////////////////////////////////
+/// COPYRIGHT TEXT 
+
+.copyright-text {
+  // justify-content: center;
+  padding: 0 1rem 1rem 1rem;
+  text-align: center;
+}
+
+////////////////////////////////////////////////////
 /// HOTEL GALLERY
 
 .gallery {
@@ -400,4 +409,78 @@
   flex: 1;
   background-color: var(--color-white);
   box-shadow: var(--shadow-light);
+}
+
+////////////////////////////////////////////////////
+/// PARAGRAPH
+
+.paragraph {
+  &:not(:last-of-type) {
+    margin-bottom: 2rem;
+  }
+}
+
+////////////////////////////////////////////////////
+/// LIST
+
+.list {
+  list-style: none;
+  margin: 3rem 0;
+  padding: 3rem 0;
+  border-top: var(--line);
+  border-bottom: var(--line);
+
+  display: flex;
+  flex-wrap: wrap;
+
+  &__item {
+    flex: 0 0 50%;
+    margin-bottom: 0.7rem;
+
+    &::before {
+      content: "";
+      height: 1rem;
+      width: 1rem;
+      display: inline-block;
+      margin-right: 0.7rem;
+
+      // FOR OLDER BROWSERS
+      // background-image: url(../img/chevron-thin-right.svg);
+      // background-size: cover;
+
+      // FOR NEW BROWSERS
+      background-color: var(--color-primary);
+      -webkit-mask-image: url(../img/chevron-thin-right.svg);
+      -webkit-mask-size: cover;
+      mask-image: url(../img/chevron-thin-right.svg);
+      mask-size: cover;
+    }
+  }
+}
+
+////////////////////////////////////////////////////
+/// RECOMEND
+
+.recomend {
+  font-size: 1.3rem;
+  color: var(--color-gray-dark-3);
+
+  display: flex;
+  align-items: center;
+
+  &__count {
+    margin-right: auto;
+  }
+
+  &__photo {
+    box-sizing: content-box;
+    height: 4rem;
+    width: 4rem;
+    border: 2px solid #fff;
+    border-radius: 50%;
+
+    &:not(:last-child) {
+      margin-right: -1.5rem;
+    }
+  }
 }
