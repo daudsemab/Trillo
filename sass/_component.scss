@@ -378,7 +378,7 @@
 
   & span {
     margin-left: 3px;
-    transition: margin-left .2s;
+    transition: margin-left 0.2s;
   }
 
   &:hover {
@@ -554,8 +554,69 @@
     color: var(--color-gray-light-3);
     position: absolute;
     top: -7.7rem;
-    left: -.8rem;
+    left: -0.8rem;
     font-family: sans-serif;
     z-index: 1;
+  }
+}
+
+////////////////////////////////////////////////////
+/// CTA
+
+.cta {
+  padding: 3rem 0;
+  text-align: center;
+
+  &__heading {
+    margin-bottom: 2rem;
+  }
+}
+
+
+.cta__btn {
+  background-image: linear-gradient(to right, var(--color-primary-light), var(--color-primary-dark));
+  color: var(--color-white);
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  border: 1px solid var(--color-white);
+  border-radius: 5rem;
+  outline: none;
+  overflow: hidden;
+
+  position: relative;
+
+  & > * {
+    height: 100%;
+    width: 100%;
+    transition: all .2s;
+    display: inline-block;
+  }
+
+  &--visible {
+    padding: 2rem 7rem;
+  }
+
+  &--invisible {
+    padding: 2rem 0;
+    position: absolute;
+    top: -100%;
+    left: 0;
+  }
+
+  &:active {
+    transform: translateY(2px);
+  }
+
+  &:hover {
+    background-image: linear-gradient(to left, var(--color-primary-light), var(--color-primary-dark));
+    cursor: pointer;
+  }
+
+  &:hover &--invisible{
+    top: 0;
+  }
+
+  &:hover &--visible{
+    transform: translateY(100%);
   }
 }
