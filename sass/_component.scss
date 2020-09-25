@@ -229,11 +229,25 @@
   flex-direction: column;
   justify-content: start;
 
+  @media only screen and (max-width: $bp-medium) {
+    margin: 0;
+
+    flex-direction: row;
+  }
+
   &__item {
     position: relative;
 
     &:not(:last-child) {
       margin-bottom: 0.5rem;
+
+      @media only screen and (max-width: $bp-medium) {
+        margin: 0;
+      }
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+      flex: 1;
     }
   }
 
@@ -272,6 +286,11 @@
     z-index: 4;
     display: flex;
     align-items: center;
+
+    @media only screen and (max-width: $bp-medium) {
+      justify-content: center;
+      padding: 2rem;
+    }
   }
 
   &__icon {
@@ -286,9 +305,12 @@
 /// COPYRIGHT TEXT
 
 .copyright-text {
-  // justify-content: center;
   padding: 0 1rem 1rem 1rem;
   text-align: center;
+
+  @media only screen and (max-width: $bp-medium) {
+    display: none;
+  }
 }
 
 ////////////////////////////////////////////////////
@@ -404,6 +426,10 @@
   border-bottom: var(--line);
   background-color: var(--color-gray-light-1);
   font-size: 1.4rem;
+
+  @media only screen and (max-width: $bp-medium) {
+    padding: 3rem;
+  }
 }
 
 .description {
@@ -413,6 +439,11 @@
   padding: 3rem;
   flex: 0 0 60%;
   margin-right: 4rem;
+
+  @media only screen and (max-width: $bp-medium) {
+    padding: 2rem;
+    margin-right: 3rem;
+  }
 }
 
 .user-reviews {
@@ -485,12 +516,21 @@
     margin-right: auto;
   }
 
+  &__friends {
+    display: flex;
+  }
+
   &__photo {
     box-sizing: content-box;
     height: 4rem;
     width: 4rem;
     border: 2px solid #fff;
     border-radius: 50%;
+
+    @media only screen and (max-width: $bp-medium) {
+      height: 3.3rem;
+      width: 3.3rem;
+    }
 
     &:not(:last-child) {
       margin-right: -1.5rem;
@@ -508,8 +548,16 @@
   position: relative;
   overflow: hidden;
 
+  @media only screen and (max-width: $bp-medium) {
+    padding: 2rem;
+  }
+
   &:not(:last-child) {
     margin-bottom: 4rem;
+
+    @media only screen and (max-width: $bp-medium) {
+      margin-bottom: 3rem;
+    }
   }
   &__text {
     margin-bottom: 2.5rem;
@@ -530,6 +578,11 @@
     width: 5rem;
     border-radius: 50%;
     margin-right: 1rem;
+
+    @media only screen and (max-width: $bp-medium) {
+      height: 4rem;
+      width: 4rem;
+    }
   }
 
   &__user-box {
@@ -566,6 +619,10 @@
 .cta {
   padding: 3rem 0;
   text-align: center;
+
+  @media only screen and (max-width: $bp-medium) {
+    padding: 2rem;
+  }
 
   &__heading {
     margin-bottom: 2rem;

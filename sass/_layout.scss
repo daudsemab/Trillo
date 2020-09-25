@@ -1,8 +1,14 @@
 .container {
   max-width: 120rem;
+  margin: 3rem auto;
   min-height: 90vh;
   background-color: var(--color-gray-dark-2);
   box-shadow: var(--shadow-dark);
+
+  @media only screen and (max-width: $bp-largest) {
+    margin: 0;
+    max-width: 100%;
+}
 }
 
 .header {
@@ -17,6 +23,10 @@
 
 .content {
   display: flex;
+
+  @media only screen and (max-width: $bp-medium) {
+    flex-direction: column;
+  }
 }
 
 .sidebar {
