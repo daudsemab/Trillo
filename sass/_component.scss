@@ -113,7 +113,7 @@
 
   @media only screen and (max-width: $bp-lg-mob) {
     order: 1;
-    flex: 0 0 100%;
+    flex: 0 0 98%;
     background-color: var(--color-gray-light-2);
   }
 
@@ -130,13 +130,17 @@
     margin-right: -3.5rem;
 
     @media only screen and (max-width: $bp-lg-mob) {
-      width: 100%;
+      width: 90%;
     }
 
     &:focus {
       background-color: var(--color-gray-light-3);
       outline: none;
       width: 100%;
+
+      @media only screen and (max-width: $bp-lg-mob) {
+        width: 90%;
+      }
     }
   }
 
@@ -528,9 +532,17 @@
   display: flex;
   flex-wrap: wrap;
 
+  @media only screen and (max-width: $bp-md-mob) {
+    margin-left: 3rem;
+  }
+
   &__item {
     flex: 0 0 50%;
     margin-bottom: 0.7rem;
+
+    @media only screen and (max-width: $bp-md-mob) {
+      flex: 0 0 100%;
+    }
 
     &::before {
       content: "";
