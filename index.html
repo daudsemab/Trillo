@@ -47,9 +47,10 @@
           </div>
           <div class="user-nav__user">
             <img
-              src="./img/user.jpg"
+              srcset="./img/user.webp, ./img/user.jpg"
               alt="User Photo"
               class="user-nav__user-photo"
+              src="./img/user.jpg"
             />
             <span class="user-nav__user-name">Daud</span>
           </div>
@@ -102,28 +103,31 @@
           <div class="gallery">
             <figure class="gallery__item">
               <img
+                srcset="./img/hotel-1.webp, ./img/hotel-1.jpg"
+                alt="Photo of Hotel 1"
+                class="gallery__photo"
                 src="./img/hotel-1.jpg"
-                alt="Photo of Hotel 1"
-                class="gallery__photo"
               />
             </figure>
             <figure class="gallery__item">
               <img
+                srcset="./img/hotel-2.webp, ./img/hotel-2.jpg"
+                alt="Photo of Hotel 1"
+                class="gallery__photo"
                 src="./img/hotel-2.jpg"
-                alt="Photo of Hotel 1"
-                class="gallery__photo"
               />
             </figure>
             <figure class="gallery__item">
               <img
-                src="./img/hotel-3.jpg"
+                srcset="./img/hotel-3.webp, ./img/hotel-3.jpg"
                 alt="Photo of Hotel 1"
                 class="gallery__photo"
+                src="./img/hotel-3.jpg"
               />
             </figure>
           </div>
           <div class="overview">
-            <h1 class="overview__heading">Pathan Hotel</h1>
+            <h1 class="overview__heading">Serena Hotel</h1>
 
             <div class="overview__stars">
               <svg class="overview__icon-star">
@@ -148,7 +152,7 @@
                 <use xlink:href="./img/sprite.svg#icon-location-pin"></use>
               </svg>
               <a href="#!" class="btn-inline">
-                <address>Defence Karachi, Pakistan</address>
+                <address>Islamabad, Pakistan</address>
               </a>
             </div>
 
@@ -186,24 +190,28 @@
                 </p>
                 <div class="recomend__friends">
                   <img
-                    src="./img/user-3.jpg"
+                    srcset="./img/user-3.webp, ./img/user-3.jpg"
                     alt="Friend 1"
                     class="recomend__photo"
+                    src="./img/user-3.jpg"
                   />
                   <img
-                    src="./img/user-4.jpg"
+                    srcset="./img/user-4.webp, ./img/user-4.jpg"
                     alt="Friend 2"
                     class="recomend__photo"
+                    src="./img/user-4.jpg"
                   />
                   <img
-                    src="./img/user-5.jpg"
+                    srcset="./img/user-5.webp, ./img/user-5.jpg"
                     alt="Friend 3"
                     class="recomend__photo"
+                    src="./img/user-5.jpg"
                   />
                   <img
-                    src="./img/user-6.jpg"
+                    srcset="./img/user-6.webp, ./img/user-6.jpg"
                     alt="Friend 4"
                     class="recomend__photo"
+                    src="./img/user-6.jpg"
                   />
                 </div>
               </div>
@@ -216,9 +224,10 @@
                 </blockquote>
                 <figcaption class="review__user">
                   <img
-                    src="./img/user-1.jpg"
+                    srcset="./img/user-1.webp, ./img/user-1.jpg"
                     alt="User-1"
                     class="review__photo"
+                    src="./img/user-1.jpg"
                   />
                   <div class="review__user-box">
                     <p class="review__name">Harry Portar</p>
@@ -249,6 +258,41 @@
               </figure>
 
               <a href="!#" class="btn-inline">Show All <span>&rarr;</span></a>
+            </div>
+          </div>
+
+          <div class="address-box">
+            <div class="address-box__maps">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1659.383135281891!2d73.0996803259969!3d33.71499640628973!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38dfc06e546426cf%3A0xf7b69122d3396404!2sIslamabad%20Serena%20Hotel!5e0!3m2!1sen!2s!4v1601788824346!5m2!1sen!2s"
+                width="600"
+                height="450"
+                frameborder="0"
+                style="border: 0"
+                allowfullscreen=""
+                aria-hidden="false"
+                tabindex="0"
+              ></iframe>
+            </div>
+
+            <div class="address-box__contact-info">
+              <div class="address-box__heading">
+                <svg class="address-box__icon-location">
+                  <use xlink:href="./img/sprite.svg#icon-location-pin"></use>
+                </svg>
+                <h4 class="address-box__location-text">
+                  Islamabad Serena Hotel, Pakistan
+                </h4>
+              </div>
+
+              <div class="address-box__contact">
+                <p class="address-box__contact--details">+92388900045</p>
+                <p class="address-box__contact--details">serena@expample.com</p>
+                <p class="address-box__contact--details">visit@pakistan.pk</p>
+                <p class="address-box__contact--details">
+                  Main Road C-Block, Green Avenue
+                </p>
+              </div>
             </div>
           </div>
 
